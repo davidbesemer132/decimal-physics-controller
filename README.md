@@ -74,6 +74,33 @@ Run the test suite with pytest:
 pytest
 ```
 
+## Benchmarks
+
+Performance benchmarks are available in the [benchmarks](benchmarks/) directory. These benchmarks measure the performance of core operations using decimal precision.
+
+### Running Benchmarks
+
+```bash
+# Run individual benchmarks
+python benchmarks/benchmark_physics_calculations.py
+python benchmarks/benchmark_vector_operations.py
+python benchmarks/benchmark_energy_calculations.py
+```
+
+### Benchmark Coverage
+
+- **Physics Calculations:** Gravitational forces, energy calculations, simulation steps
+- **Vector Operations:** Magnitude, normalization, dot/cross products
+- **Energy Calculations:** Kinetic, potential, and total energy for multi-body systems
+
+### Benchmark Licensing
+
+All benchmarks are dual-licensed (MIT OR CC BY 4.0) to support both commercial development and academic research. See [benchmarks/README.md](benchmarks/README.md) for:
+- Detailed license information
+- Attribution requirements for academic use
+- Citation guidelines
+- Complete benchmark documentation
+
 ## Documentation
 
 Detailed documentation is available in the [docs](docs/) directory. Key topics include:
@@ -103,11 +130,46 @@ Contributions are welcome! Please:
 
 ## License
 
-This project is dual-licensed under:
-- **Creative Commons Attribution 4.0 International (CC BY 4.0)** - Choose this for academic and creative uses
-- **MIT License** - Choose this for software and commercial uses
+This project is dual-licensed under MIT License and Creative Commons Attribution 4.0 International (CC BY 4.0).
 
-See [LICENSE](LICENSE) for full details.
+Copyright (c) 2025 David A. Besemer
+
+### Dual License Structure
+
+You may choose either license based on your use case:
+
+#### 1. MIT License (for commercial/derivative use)
+- ✅ Use in commercial software
+- ✅ Create derivative works
+- ✅ Modify and redistribute
+- ✅ Include in proprietary software
+- ⚠️ Must include copyright notice and license text
+
+#### 2. Creative Commons Attribution 4.0 International (for academic/scientific use)
+- ✅ Use in academic publications
+- ✅ Use in scientific research
+- ✅ Share and adapt for any purpose
+- ⚠️ **Must give appropriate credit to David A. Besemer**
+- ⚠️ Must provide a link to the license
+- ⚠️ Must indicate if changes were made
+
+### Choosing a License
+
+- **For scientific/academic publications:** Use CC BY 4.0 (attribution mandatory)
+- **For commercial/derivative software:** Use MIT License  
+- **For any other use:** Choose the license that fits your needs best
+
+Both licenses are equally valid and enforceable.
+
+### License Coverage
+
+All components of this project are covered by the dual license:
+- **Source code:** MIT OR CC BY 4.0
+- **Documentation:** MIT OR CC BY 4.0
+- **Benchmarks:** MIT OR CC BY 4.0 (see [benchmarks/README.md](benchmarks/README.md))
+- **Examples:** MIT OR CC BY 4.0
+
+See the main [LICENSE](LICENSE) file for complete license terms.
 
 ## Citation
 
