@@ -1,0 +1,75 @@
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "decimal-physics-controller"
+version = "0.1.0"
+description = "A Python library for precise physics simulations using decimal arithmetic"
+readme = "README.md"
+requires-python = ">=3.7"
+authors = [
+    {name = "David A. Besemer", email = "david@besemer.dev"}
+]
+license = {text = "Dual License: CC BY 4.0 and MIT"}
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "License :: Creative Commons Attribution 4.0 International",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering",
+    "Topic :: Software Development :: Libraries :: Python Modules"
+]
+keywords = ["physics", "simulation", "decimal", "precision", "scientific-computing"]
+dependencies = [
+    "numpy>=1.20.0",
+    "scipy>=1.7.0"
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=6.2.0",
+    "pytest-cov>=2.12.0",
+    "black>=21.0",
+    "flake8>=3.9.0",
+    "mypy>=0.900"
+]
+docs = [
+    "sphinx>=4.0.0",
+    "sphinx-rtd-theme>=1.0.0"
+]
+notebooks = [
+    "jupyter>=1.0.0",
+    "notebook>=6.4.0",
+    "ipykernel>=6.0.0"
+]
+
+[project.urls]
+Homepage = "https://github.com/davidbesemer132/decimal-physics-controller"
+Repository = "https://github.com/davidbesemer132/decimal-physics-controller.git"
+Issues = "https://github.com/davidbesemer132/decimal-physics-controller/issues"
+Documentation = "https://github.com/davidbesemer132/decimal-physics-controller/wiki"
+
+[tool.setuptools]
+packages = ["decimal_physics_controller"]
+
+[tool.black]
+line-length = 100
+target-version = ['py37', 'py38', 'py39', 'py310', 'py311', 'py312']
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-v --cov=decimal_physics_controller --cov-report=html"
+
+[tool.mypy]
+python_version = "3.7"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = false
