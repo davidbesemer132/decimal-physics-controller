@@ -4,8 +4,7 @@
     "version": "0.1.0",
     "description": "A Python library for precise physics simulations and calculations using decimal arithmetic for high-precision numerical accuracy",
     "author": {
-      "name": "David A. Besemer",
-      "email": "davidbesemer132@example.com"
+      "name": "David A. Besemer"
     },
     "repository": {
       "type": "git",

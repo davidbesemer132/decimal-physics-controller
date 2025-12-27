@@ -19,8 +19,7 @@ sys.path.insert(0, str(Path(__file__).parent.parent))
 from src.core.controller import (
     DecimalPhysicsController,
     PhysicsObject,
-    Vector3D,
-    SimulationMode
+    Vector3D
 )
 
 
@@ -35,20 +34,17 @@ class TestPhysicsControllerBenchmarks:
 
     def test_add_single_object(self, benchmark):
         """Benchmark adding a single object to simulation."""
-        controller = DecimalPhysicsController()
+        iteration = [0]
         
         def add_object():
+            controller = DecimalPhysicsController()
             obj = PhysicsObject(
-                name="test_obj",
+                name=f"test_obj_{iteration[0]}",
                 mass=Decimal("1000"),
                 position=Vector3D(Decimal("0"), Decimal("0"), Decimal("0"))
             )
-            try:
-                controller.add_object(obj)
-            except ValueError:
-                # Object already exists, remove and re-add
-                controller.remove_object("test_obj")
-                controller.add_object(obj)
+            controller.add_object(obj)
+            iteration[0] += 1
         
         benchmark(add_object)
 
