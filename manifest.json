@@ -1,0 +1,240 @@
+{
+  "project": {
+    "name": "Decimal Physics Controller",
+    "version": "0.1.0",
+    "description": "A Python library for precise physics simulations and calculations using decimal arithmetic for high-precision numerical accuracy",
+    "author": {
+      "name": "David A. Besemer",
+      "email": "davidbesemer132@example.com"
+    },
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/davidbesemer132/decimal-physics-controller",
+      "issues": "https://github.com/davidbesemer132/decimal-physics-controller/issues",
+      "documentation": "https://github.com/davidbesemer132/decimal-physics-controller/wiki"
+    },
+    "license": {
+      "type": "Dual License",
+      "licenses": [
+        {
+          "name": "MIT License",
+          "usage": "Commercial and derivative software",
+          "url": "https://opensource.org/licenses/MIT"
+        },
+        {
+          "name": "Creative Commons Attribution 4.0 International (CC BY 4.0)",
+          "usage": "Academic and scientific publications",
+          "url": "http://creativecommons.org/licenses/by/4.0/"
+        }
+      ],
+      "terms": {
+        "python_community": "Free for Python community use",
+        "commercial": "Commercial usage requires agreement with David A. Besemer",
+        "attribution": "Attribution to David A. Besemer required in all uses"
+      }
+    },
+    "language": "Python",
+    "python_version": ">=3.7",
+    "keywords": [
+      "physics",
+      "simulation",
+      "decimal",
+      "precision",
+      "numerical-accuracy",
+      "scientific-computing"
+    ]
+  },
+  "benchmarks": {
+    "framework": "pytest-benchmark",
+    "version": "4.0.0",
+    "description": "Comprehensive benchmark suite for filesystem, file formats, and application performance",
+    "categories": [
+      {
+        "name": "filesystem",
+        "description": "Performance tests for filesystem operations",
+        "tests": [
+          "sequential_write_small",
+          "sequential_write_medium",
+          "sequential_write_large",
+          "sequential_read_small",
+          "sequential_read_medium",
+          "sequential_read_large",
+          "random_seek_operations",
+          "buffered_write_performance",
+          "unbuffered_write_performance",
+          "directory_listing_performance",
+          "file_stat_operations"
+        ]
+      },
+      {
+        "name": "fileformat",
+        "description": "Performance tests for file format serialization/deserialization",
+        "formats": [
+          {
+            "name": "JSON",
+            "tests": [
+              "json_serialize_small_dict",
+              "json_deserialize_small_dict",
+              "json_serialize_large_dict",
+              "json_deserialize_large_dict",
+              "json_serialize_nested_structure",
+              "json_deserialize_nested_structure"
+            ]
+          },
+          {
+            "name": "Pickle",
+            "tests": [
+              "pickle_serialize_small_object",
+              "pickle_deserialize_small_object",
+              "pickle_serialize_large_list",
+              "pickle_deserialize_large_list",
+              "pickle_serialize_complex_objects",
+              "pickle_deserialize_complex_objects"
+            ]
+          },
+          {
+            "name": "CSV",
+            "tests": [
+              "csv_write_small_dataset",
+              "csv_read_small_dataset",
+              "csv_write_large_dataset",
+              "csv_read_large_dataset",
+              "csv_dictwriter_performance",
+              "csv_dictreader_performance"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "application",
+        "description": "Performance tests for the physics controller application",
+        "tests": [
+          "controller_initialization",
+          "add_single_object",
+          "vector3d_magnitude_calculation",
+          "vector3d_dot_product",
+          "vector3d_cross_product",
+          "vector3d_normalize",
+          "gravitational_force_calculation",
+          "kinetic_energy_calculation",
+          "potential_energy_calculation",
+          "single_simulation_step",
+          "multiple_simulation_steps",
+          "total_energy_calculation",
+          "apply_forces_multiple_objects",
+          "full_simulation_run"
+        ]
+      },
+      {
+        "name": "stress_tests",
+        "description": "Stress tests for the physics controller",
+        "tests": [
+          "many_objects_simulation",
+          "long_simulation_run"
+        ]
+      }
+    ],
+    "configuration": {
+      "rounds": 100,
+      "warmup_rounds": 10,
+      "iterations": 1,
+      "min_time": 0.000005,
+      "statistics": [
+        "min",
+        "max",
+        "mean",
+        "median",
+        "stddev"
+      ]
+    },
+    "output_formats": [
+      "terminal",
+      "json",
+      "html"
+    ],
+    "memory_profiling": {
+      "enabled": true,
+      "tools": ["pytest-benchmark"]
+    }
+  },
+  "file_formats": {
+    "supported": [
+      {
+        "name": "JSON",
+        "description": "JavaScript Object Notation",
+        "extensions": [".json"],
+        "use_cases": ["configuration", "data-exchange", "serialization"]
+      },
+      {
+        "name": "Pickle",
+        "description": "Python object serialization",
+        "extensions": [".pkl", ".pickle"],
+        "use_cases": ["python-objects", "binary-serialization", "caching"]
+      },
+      {
+        "name": "CSV",
+        "description": "Comma-Separated Values",
+        "extensions": [".csv"],
+        "use_cases": ["tabular-data", "spreadsheets", "data-export"]
+      }
+    ]
+  },
+  "application_specifications": {
+    "physics_controller": {
+      "name": "DecimalPhysicsController",
+      "description": "High-precision physics controller using decimal arithmetic",
+      "features": [
+        "High-precision decimal calculations",
+        "Gravitational force calculations",
+        "Energy calculations (kinetic and potential)",
+        "Vector operations (3D)",
+        "Simulation stepping and history tracking"
+      ],
+      "simulation_modes": [
+        "classical",
+        "relativistic",
+        "quantum",
+        "electromagnetic"
+      ],
+      "precision": {
+        "decimal_places": 50,
+        "rounding_mode": "ROUND_HALF_UP"
+      },
+      "constants": {
+        "gravitational_constant": "6.67430E-11",
+        "speed_of_light": "299792458",
+        "planck_constant": "6.62607015E-34",
+        "boltzmann_constant": "1.380649E-23"
+      }
+    }
+  },
+  "dependencies": {
+    "runtime": [
+      "numpy>=1.21",
+      "pandas>=2.0"
+    ],
+    "development": [
+      "pytest>=7.0",
+      "pytest-cov>=3.0",
+      "pytest-benchmark>=4.0.0",
+      "black>=22.0",
+      "isort>=5.0",
+      "flake8>=4.0",
+      "mypy>=0.950"
+    ],
+    "benchmarks": [
+      "pytest-benchmark>=4.0.0",
+      "memory-profiler>=0.60"
+    ]
+  },
+  "citation": {
+    "format": "bibtex",
+    "entry": "@software{besemer2025decimal,\n  author = {Besemer, David A.},\n  title = {Decimal Physics Controller},\n  year = {2025},\n  url = {https://github.com/davidbesemer132/decimal-physics-controller}\n}"
+  },
+  "metadata": {
+    "created": "2025-12-27",
+    "last_updated": "2025-12-27",
+    "manifest_version": "1.0.0",
+    "schema_version": "1.0"
+  }
+}

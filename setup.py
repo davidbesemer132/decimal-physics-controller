@@ -44,6 +44,7 @@ setup(
         "dev": [
             "pytest>=6.2.0",
             "pytest-cov>=2.12.0",
+            "pytest-benchmark>=4.0.0",
             "black>=21.0",
             "flake8>=3.9.0",
             "mypy>=0.900",
@@ -56,6 +57,10 @@ setup(
             "jupyter>=1.0.0",
             "notebook>=6.4.0",
             "ipykernel>=6.0.0",
+        ],
+        "benchmarks": [
+            "pytest-benchmark>=4.0.0",
+            "memory-profiler>=0.60",
         ],
     },
     include_package_data=True,

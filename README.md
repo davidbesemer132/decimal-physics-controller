@@ -74,6 +74,33 @@ Run the test suite with pytest:
 pytest
 ```
 
+### Benchmarks
+
+The project includes comprehensive benchmark tests for filesystems, file formats, and application performance. Run benchmarks with:
+
+```bash
+# Install benchmark dependencies
+pip install -e ".[benchmarks]"
+
+# Run all benchmarks
+pytest benchmarks/ --benchmark-only
+
+# Run specific benchmark category
+pytest benchmarks/filesystem_benchmarks.py --benchmark-only
+pytest benchmarks/fileformat_benchmarks.py --benchmark-only
+pytest benchmarks/application_benchmarks.py --benchmark-only
+
+# Generate benchmark report
+pytest benchmarks/ --benchmark-only --benchmark-json=benchmark_results.json
+```
+
+Benchmark categories:
+- **Filesystem Benchmarks**: Tests for read, write, and seek operations
+- **File Format Benchmarks**: Tests for JSON, Pickle, and CSV serialization/deserialization
+- **Application Benchmarks**: Tests for physics controller operations and simulations
+
+For detailed benchmark configuration and results, see the [manifest.json](manifest.json) file.
+
 ## Documentation
 
 Detailed documentation is available in the [docs](docs/) directory. Key topics include:
@@ -108,6 +135,14 @@ This project is dual-licensed under:
 - **MIT License** - Choose this for software and commercial uses
 
 See [LICENSE](LICENSE) for full details.
+
+### License Terms
+
+- **Free for Python Community**: This software is provided free of charge for the Python community
+- **Commercial Use**: Commercial usage outside the Python community requires agreement with the author
+- **Attribution Required**: All uses must provide attribution to David A. Besemer
+
+For commercial licensing inquiries or special agreements, please open an [issue](https://github.com/davidbesemer132/decimal-physics-controller/issues) or contact the author.
 
 ## Citation
 
