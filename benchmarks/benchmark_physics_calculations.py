@@ -34,8 +34,7 @@ sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')
 from src.core.controller import (
     DecimalPhysicsController,
     PhysicsObject,
-    Vector3D,
-    SimulationMode
+    Vector3D
 )
 
 
