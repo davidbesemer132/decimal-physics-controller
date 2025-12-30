@@ -1,0 +1,67 @@
+{
+  "name": "decimal-physics-controller-benchmarks",
+  "version": "0.1.0",
+  "description": "Benchmark tests for the Decimal Physics Controller library",
+  "author": "David A. Besemer",
+  "copyright": "Copyright (c) 2025 David A. Besemer",
+  "license": {
+    "type": "Dual License",
+    "licenses": [
+      {
+        "name": "MIT License",
+        "spdx": "MIT",
+        "url": "https://opensource.org/licenses/MIT",
+        "purpose": "For commercial and derivative software use",
+        "applies_to": [
+          "benchmark_*.py",
+          "test_*.py",
+          "All benchmark implementation code"
+        ]
+      },
+      {
+        "name": "Creative Commons Attribution 4.0 International",
+        "spdx": "CC-BY-4.0",
+        "url": "http://creativecommons.org/licenses/by/4.0/",
+        "purpose": "For academic and scientific use, publications, and research",
+        "applies_to": [
+          "benchmark_*.py",
+          "test_*.py",
+          "Benchmark results and methodology",
+          "Scientific analysis and data"
+        ],
+        "attribution_requirement": "You must give appropriate credit to David A. Besemer, provide a link to the license, and indicate if changes were made"
+      }
+    ],
+    "license_file": "../LICENSE",
+    "notes": [
+      "Users may choose either license based on their use case",
+      "Both licenses are equally valid and enforceable",
+      "All files reference the main LICENSE file in the repository root",
+      "For scientific/academic publications: Use CC BY 4.0 (attribution mandatory)",
+      "For commercial/derivative software: Use MIT License",
+      "Python community usage: Aligned with both licenses for maximum flexibility"
+    ]
+  },
+  "benchmarks": {
+    "physics_calculations": {
+      "file": "benchmark_physics_calculations.py",
+      "description": "Benchmarks for core physics calculations including gravitational forces and energy",
+      "license": "MIT OR CC-BY-4.0"
+    },
+    "vector_operations": {
+      "file": "benchmark_vector_operations.py",
+      "description": "Benchmarks for 3D vector operations with decimal precision",
+      "license": "MIT OR CC-BY-4.0"
+    },
+    "energy_calculations": {
+      "file": "benchmark_energy_calculations.py",
+      "description": "Benchmarks for kinetic and potential energy calculations",
+      "license": "MIT OR CC-BY-4.0"
+    }
+  },
+  "python_community_guidelines": {
+    "usage": "These benchmarks are provided under dual license to support both commercial development (MIT) and academic research (CC BY 4.0)",
+    "contribution": "Contributions should maintain compatibility with both licenses",
+    "citation": "When using in academic work, please cite the repository and provide attribution to David A. Besemer"
+  }
+}
