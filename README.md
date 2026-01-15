@@ -6,6 +6,8 @@ A Python library for precise physics simulations and calculations using decimal 
 
 - **High-Precision Arithmetic**: Built on Python's `decimal` module for arbitrary precision calculations
 - **Physics Simulations**: Comprehensive tools for modeling and simulating physical systems
+- **Quantum-Thermodynamic Simulations**: Schrödinger's Cat experiment with quantum entropy and thermodynamics
+- **Deterministic AI Control**: Reproducible simulations with seed-based determinism
 - **Scientific Computing**: Integration with NumPy and SciPy for advanced numerical methods
 - **Jupyter Support**: Full support for interactive notebooks and visualization
 - **Well-Tested**: Comprehensive test suite using pytest
@@ -36,6 +38,34 @@ controller = PhysicsController()
 # Your physics calculations here
 result = controller.calculate(...)
 ```
+
+### Schrödinger's Cat Quantum Simulation
+
+```python
+from decimal_physics_controller import SchrodingerCatSimulation
+
+# Create a deterministic quantum-thermodynamic simulation
+sim = SchrodingerCatSimulation(seed=42, precision=50)
+
+# Run simulation for 10 minutes
+sim.run(duration_seconds=600)
+
+# Get complete state
+state = sim.get_complete_state()
+print(f"Entropy: {state['entropy']:.4f}")
+print(f"Temperature: {state['temperature_celsius']:.2f}°C")
+print(f"Cat is alive: {state['is_alive']}")
+
+# Display detailed summary
+print(sim.get_summary())
+```
+
+The Schrödinger's Cat simulation combines:
+- **Quantum Entropy**: Von Neumann entropy S = -Tr(ρ log ρ) tracking quantum decoherence
+- **Thermodynamics**: Heat generation and time-to-death calculations
+- **AI Control**: Deterministic AI with seed 42 controlling LCD display patterns
+- **Biological Chaos**: Cat's instinctive behavior breaks determinism
+- **Fractal Stasis**: Mandelbrot set patterns for cat hypnosis
 
 ## Requirements
 
@@ -85,11 +115,20 @@ Detailed documentation is available in the [docs](docs/) directory. Key topics i
 
 ## Examples
 
-Check the [examples](examples/) directory for Jupyter notebooks demonstrating:
+Check the [examples](examples/) directory for demonstrations:
 
-- Basic physics simulations
-- Precision arithmetic demonstrations
-- Advanced use cases
+- **01_orbit_decay.py**: Orbital decay simulation showing decimal vs float precision
+- **02_schrodinger_cat.py**: Complete Schrödinger's Cat quantum-thermodynamic experiment with multiple scenarios
+- **02_schrodinger_cat_quick_test.py**: Quick test of quantum simulation functionality
+
+### Schrödinger's Cat Scenarios
+
+The quantum simulation includes four demonstration scenarios:
+
+1. **Heat Death (Stroboscope Mode)**: High-power LCD causes heat death in ~28 minutes
+2. **Fractal Stasis**: Low-power Mandelbrot patterns extend survival to 6-7 hours
+3. **Biological Chaos**: Cat's stubbornness breaks AI determinism (seed corruption)
+4. **Entropy Evolution**: Von Neumann entropy tracking from God state (S<0.5) to Zombie state (S>0.5)
 
 ## Contributing
 
